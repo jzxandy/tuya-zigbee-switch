@@ -73,6 +73,12 @@ jobs:
         BOARD=SWITCH_MOES_ALL_TS0013 DEVICE_TYPE=router make board/build
         ls -lh bin/router/SWITCH_MOES_ALL_TS0013/
 
+    - name: Build Moes TS0014 Router (4-gang, Silicon Labs)
+      run: |
+        source .venv/bin/activate
+        BOARD=SWITCH_MOES_ALL_TS0014 DEVICE_TYPE=router make board/build
+        ls -lh bin/router/SWITCH_MOES_ALL_TS0014/
+
     - name: Update Z2M converters
       run: |
         source .venv/bin/activate
