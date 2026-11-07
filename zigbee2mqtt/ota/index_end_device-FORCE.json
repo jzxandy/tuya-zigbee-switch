@@ -1158,7 +1158,7 @@
     "fileName": "tlc_switch-1.1.4-90af4d32-forced.zigbee",
     "fileVersion": 4294967295,
     "fileSize": 151538,
-    "url": "https://github.com/jzxandy/tuya-zigbee-switch/raw/refs/heads/development_build/bin/end_device/SWITCH_MOES_ALL_TS0012_END_DEVICE/tlc_switch-1.1.4-90af4d32-forced.zigbee",
+    "url": "https://github.com/jzxandy/tuya-zigbee-switch/raw/3eb6615972f912e259ff66a3bbab36e479b2b7ef/bin/end_device/SWITCH_MOES_ALL_TS0012_END_DEVICE/tlc_switch-1.1.4-90af4d32-forced.zigbee",
     "imageType": 43510,
     "manufacturerCode": 4417,
     "sha512": "e61cf250b2757772e90c62e6f20c464b68c0ad8a539bd82e5caf34a8f895b41f4744f51b6675477a14b2701a01e4c8267b91c1a0b653bf306e00b523bfa43d63",
