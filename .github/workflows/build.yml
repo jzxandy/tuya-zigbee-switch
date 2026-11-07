@@ -53,11 +53,11 @@ jobs:
         make telink/tools/all
         make setup_venv
 
-    - name: Build Moes TS0012
+    - name: Build Moes TS0012 Router
       run: |
         source .venv/bin/activate
-        BOARD=SWITCH_MOES_ALL_TS0012 DEVICE_TYPE=end_device make board/build
-        ls -lh bin/end_device/SWITCH_MOES_ALL_TS0012_END_DEVICE/
+        BOARD=SWITCH_MOES_ALL_TS0012 DEVICE_TYPE=router make board/build
+        ls -lh bin/router/SWITCH_MOES_ALL_TS0012/
 
     - name: Update Z2M converters
       run: |
