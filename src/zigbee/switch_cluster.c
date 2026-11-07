@@ -69,7 +69,7 @@ static void switch_cluster_flash_indicator(zigbee_switch_cluster *cluster) {
     }
     // Only flash when LED is idle (not in "not connected" forever-blink)
     if (cluster->indicator_led->blink_times_left == 0) {
-        led_blink(cluster->indicator_led, 50, 50, 1);
+       // led_blink(cluster->indicator_led, 50, 50, 1);
     }
 }
 
