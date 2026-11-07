@@ -39,8 +39,9 @@ static void sync_switch_indicator_led(zigbee_switch_cluster *cluster) {
         return;
     }
 
-    if (cluster->relay_mode != ZCL_ONOFF_CONFIGURATION_RELAY_MODE_DETACHED &&
-        switch_cluster_has_valid_relay(cluster)) {
+    // Any button with a relay leaves its LED to the relay indicator logic,
+    // including detached buttons (manual mode must not be forced off).
+    if (switch_cluster_has_valid_relay(cluster)) {
         return;
     }
 
