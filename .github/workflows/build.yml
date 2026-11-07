@@ -51,6 +51,8 @@ jobs:
     - name: Install SDK and Toolchain
       run: |
         make telink/tools/all
+        make silabs/tools/all
+        make silabs/tools/trust
         make setup_venv
 
     - name: Build Moes TS0011 Router (1-gang)
