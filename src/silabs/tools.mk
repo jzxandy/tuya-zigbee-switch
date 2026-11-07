@@ -14,7 +14,7 @@ SIMPLICITY_SDK_URL := $(SIMPLICITY_SDK_REPO)/releases/download/v$(SIMPLICITY_SDK
 
 # Silicon Labs download URLs
 COMMANDER_URL := https://www.silabs.com/documents/login/software/SimplicityCommander-Linux.zip
-SLC_CLI_URL := https://www.silabs.com/documents/public/software/slc_cli_linux.zip
+SLC_CLI_URL := https://www.silabs.com/documents/login/software/slc_cli_linux.zip
 SILABS_CURL_HEADERS := \
     -H 'Accept-Language: en-US,en;q=0.9' \
     -H 'Sec-Fetch-Dest: document' \
@@ -153,7 +153,7 @@ $(TOOLS_DIR)/slc-cli: | $(DOWNLOAD_DIR)
 	@echo "Downloading SLC CLI..."
 	@if [ ! -f "$(DOWNLOAD_DIR)/slc_cli_linux.zip" ]; then \
 		echo "Attempting to download from: $(SLC_CLI_URL)"; \
-		if ! curl -L "$(SLC_CLI_URL)" \
+		if ! curl -L $(SILABS_CURL_HEADERS) "$(SLC_CLI_URL)" \
 			-o "$(DOWNLOAD_DIR)/slc_cli_linux.zip" \
 			--fail --show-error --connect-timeout 30; then \
 			echo "Download failed. Please manually download slc_cli_linux.zip"; \
